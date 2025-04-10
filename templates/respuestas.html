@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Respuestas Recibidas</title>
+</head>
+<body>
+    <h2>Respuestas Recibidas</h2>
+    {% for tabla in tablas %}
+        {{ tabla|safe }}
+    {% endfor %}
+</body>
+</html>

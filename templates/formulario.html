@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Participación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Encuesta de Participación</h2>
+        <form action="/enviar" method="post">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label>¿Ha participado en alguna faceta de las buenas nuevas este mes?</label>
+            <select name="participacion" required>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>¿Ha conducido estudios bíblicos este mes?</label>
+            <select name="estudios_biblicos" required>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Cantidad de estudios:</label>
+            <input type="number" name="cantidad_estudios">
+
+            <label>¿Sirve como precursor?</label>
+            <select name="es_precursor">
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Horas dedicadas (si aplica):</label>
+            <input type="number" name="horas_precursor">
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
